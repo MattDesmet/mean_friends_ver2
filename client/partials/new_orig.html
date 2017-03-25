@@ -1,0 +1,45 @@
+<h1>Add user page | This is the '/NEW' Route</h1>
+
+<div ng-controller="userController">
+  <fieldset><legend>User Dashboard</legend>
+    <form ng-submit = "add()">
+      <p><input type="text" ng-model = "newUser.first_name" placeholder="enter first name">  First Name</p>
+      <p><input type="text" ng-model = "newUser.last_name" placeholder="enter last name">  Last Name</p>
+      <!-- <p><input type="text" ng-model = "newUser.first_name" placeholder="enter first name" autofocus ng-init="newUser.first_name='Bob'">  First Name</p>
+      <p><input type="text" ng-model = "newUser.last_name" placeholder="enter last name" ng-init="newUser.last_name='Smith'">  Last Name</p> -->
+      <p><input type="date" ng-model = "newUser.birthday" placeholder="enter birthday">   Birthday</p>
+      <input type="submit" value = "Create">
+    </form>
+</table>
+</fieldset>
+</div>
+<form action="#/dashboard" method="get">
+ <button type="submit">Back to Dashboard</button>
+</form>
+
+
+<style media="screen">
+      div {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        /*display: inline-block;*/
+          }
+      table {
+        margin-top: 30px;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        }
+        td,
+        th {
+          border: 1px solid #CCC;
+        }
+        input {
+          /*display: block;*/
+          display: inline-block;
+        }
+        body {
+          background-color: #336699;
+          /*background-color: #3366cc;*/
+        }
+</style>

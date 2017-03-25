@@ -1,0 +1,37 @@
+<div ng-controller = 'userController'>
+  <a href="#/new">Add a Friend</a>
+  <h1>List of Friends</h1>
+  <table>
+    <!-- <table border='1'> -->
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Birthday</th>
+      <th>Delete</th>
+      <th>Show</th>
+      <th>Update</th>
+    </tr>
+    <tr ng-repeat='user in users'>
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>{{user.birthday | date: 'medium'}}</td>
+      <td><a href='' ng-click='delete(user._id)'>Delete</a></td>
+      <td><a href='' ng-click='show(user._id)'>Show</a></td>
+      <td><a href='' ng-click='update(user._id)'>update</a></td>
+    </tr>
+  </table>
+</div>
+<style media="screen">
+body {
+  /*background-color: #336699;*/
+  /*background-color: #336699;*/
+  /*background-color: #3366cc;*/
+}
+table{
+  border-style: solid;
+  border-width: thin;
+}
+td{
+  border: 1px solid #CCC;
+}
+</style>

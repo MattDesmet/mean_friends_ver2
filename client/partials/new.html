@@ -1,0 +1,43 @@
+
+<div class="container" ng-controller="userController">
+  <h1>Add a Friend</h1>
+  <form ng-submit = "add()">
+
+    <!-- FIRST NAME field input -->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" ng-model ="newUser.first_name" placeholder="enter first name">
+      </div>
+    </div>
+
+    <!-- LAST NAME field input -->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" ng-model = "newUser.last_name" placeholder="enter last name">
+      </div>
+    </div>
+
+    <!-- Birthday field input -->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Birthday</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" ng-model="newUser.birthday" placeholder="enter birthday">
+      </div>
+    </div>
+
+
+    <!-- BUTTON -->
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Add Friend</button>
+      </div>
+    </div>
+  </form>
+  <!-- <div class="btn-group btn-group-justified">
+    <a href="#/show" class="btn btn-primary">Add</a>
+    <a href="#/dashboard" class="btn btn-primary">View All</a>
+    <a href="#/update" class="btn btn-primary">Change</a>
+  </div> -->
+</div>
