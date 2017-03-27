@@ -11,6 +11,9 @@ module.exports = function(app){
     user.delete(request,response)
     })
   app.post('/users/change', function(request,response){
+    console.log('routes: ',request.body);
     user.change(request,response)
     })
 }
+
+console.log('routes.js is working');

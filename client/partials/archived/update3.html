@@ -1,0 +1,20 @@
+<!-- <div class="container"> -->
+  <!-- TABLE  -->
+  <div class="jumbotron" ng-controller='userController'>
+  <h1 class="display-3">Update User Record</h1><hr>
+    <p>First Name: <input type="text" ng-model='cur_user.first_name'></p>
+    <p>Last Name: <input type="text" ng-model='cur_user.last_name'></p>
+    <p>Birthday: <input type="date" value="cur_user.birthday"></p>
+    <input class="btn btn-primary btn-lg" type="submit" value="Update Record" ng-click="change()">
+    <!-- <p>Birthday: <input type="date" value="{{cur_user.birthday | date: 'yyyy-MM-dd'}}"></p> -->
+  </div>
+  <!-- <hr>
+  <form ng-submit="change()">
+    <input class="btn btn-primary btn-lg" type="submit" value="Update Record">
+  </form> -->
+
+<style>
+.container {
+  padding-top: 1cm;
+}
+</style>

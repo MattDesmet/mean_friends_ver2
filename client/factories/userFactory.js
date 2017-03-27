@@ -22,9 +22,10 @@ app.factory('userFactory', function($http, $location, $route){
       $location.url('/update/' +id)
     }
     factory.change = function(user){
-      $http.post('/users/change/',user).then(function(){
-        $location.url('/dashboard')
-        })
+      console.log('this is the USER data in USER factory', user);
+      $http.post('/users/change',user).then(function(){
+        $location.url('/show')
+      })
     }
     return factory;
   })

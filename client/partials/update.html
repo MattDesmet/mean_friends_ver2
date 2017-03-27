@@ -1,20 +1,37 @@
+<!-- FIRST NAME field input -->
+<div class="jumbotron" ng-controller="userController">
+    <h1 class="display-3">Update Friend</h1>
+    <form>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">First Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model='cur_user.first_name'>
+            </div>
+        </div>
 
-<div class="container">
-  <div class="jumbotron" ng-controller='userController'>
-  <h1 class="display-3">Update User Record</h1>
-    <p>First Name: <input type="text" ng-model='cur_user.first_name'></p>
-    <p>Last Name: <input type="text" ng-model='cur_user.last_name'></p>
-    <p>Birthday: <input type="text" value="{{cur_user.birthday | date: 'yyyy-MM-dd'}}"></p>
-  </div>
-  <hr>
-  <form ng-submit="change()"method="post">
-    <input class="btn btn-primary btn-lg" type="submit" value="Update Record">  
-  </form>
-  <!-- <input class="btn btn-primary btn-lg" type="submit" value="Update Record" ng-click="change()"> -->
-  </div>
+        <!-- LAST NAME field input -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Last Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model='cur_user.last_name'>
+            </div>
+        </div>
+
+        <!-- Birthday field input -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Birthday</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" value="{{cur_user.birthday | date: 'MM-dd-yyyy'}}">
+            </div>
+        </div>
+
+
+        <!-- BUTTON -->
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <!-- <a class="btn btn-primary btn-lg" href="#/dashboard" role="button">Back to All Friends</a> -->
+                <input class="btn btn-warning btn-lg" type="submit" value="Update Record" ng-click="change()">
+            </div>
+        </div>
+    </form>
 </div>
-<style media="screen">
-.container {
-  padding-top: 1cm;
-}
-</style>

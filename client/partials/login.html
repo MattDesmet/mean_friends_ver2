@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="static/styles.css">
+<div class="jumbotron" ng-controller="loginController">
+    <h1>Login</h1><br>
+    <form ng-submit="login()">
+
+      <!-- ERRORS -->
+      <p style='color:red' ng-repeat='error in errors track by $index'>{{error}}</p>
+
+      <!-- USER NAME -->
+      <div class="input-group col-lg-4">
+        <span class="input-group-addon input-group-lg"><i class="glyphicon glyphicon-user"></i></span>
+        <!-- <input id="email" type="text" class="form-control input-lg" ng-model="login_info.username"> -->
+        <input id="email" type="text" class="form-control input-lg" ng-model="login_info.username" ng-init="login_info.username='Bob'">
+      </div><br>
+
+      <!-- PASSWORD -->
+      <div class="input-group col-lg-4">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <!-- <input id="password" type="text" class="form-control input-lg" ng-model="login_info.password"> -->
+        <input id="password" type="text" class="form-control input-lg" ng-model="login_info.password" ng-init="login_info.password='Bobs_Password'">
+      </div><br>
+
+      <!-- BUTTON -->
+      <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+    </form>
+  </div>

@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html ng-app='app'>
-  <head>
+
+<head>
     <title>Friends</title>
 
     <!-- styling libraries -->
+    <link rel="icon" href="static/favicon.ico">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js'></script>
+    <link rel="stylesheet" href="static/styles.css">
     <!-- angular elements -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
     <script src='app.js'></script>
     <script src='factories/userFactory.js'></script>
+    <script src='factories/loginFactory.js'></script>
     <script src='controllers/userController.js'></script>
+    <script src='controllers/loginController.js'></script>
 
-  </head>
-  <body ng-view>
-    <!-- <div ng-controller='userController' class=""> -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAV bar -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#/">MEAN Friends</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="#/dashboard">Dashboard</a></li>
+              <!-- <li class="active"><a href="#/">Dashboard</a></li> -->
+              <li><a href="#/new">Add a Friend</a></li>
+              <!-- <li><a href="#/show">Show</a></li> -->
+              <!-- <li><a href="#/update">Update</a></li> -->
+            </ul>
+          </div>
+        </nav>
+        <div ng-view=""></div>
     </div>
 
-  </body>
+</body>
+
 </html>

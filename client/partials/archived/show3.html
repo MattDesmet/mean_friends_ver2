@@ -1,0 +1,17 @@
+<!-- <div class="container"> -->
+    <div class="jumbotron" ng-controller='userController'>
+        <h1 class="display-3">Show Friend</h1>
+        <p>First Name: <input type="text" ng-model='cur_user.first_name'></p>
+        <p>Last Name: <input type="text" ng-model='cur_user.last_name'></p>
+        <p>Birthday: <input type="text" value="{{cur_user.birthday | date: 'MM-dd-yyyy'}}"></p>
+    </div>
+    <hr>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#/dashboard" role="button">Back to All Friends</a>
+    </p>
+</div>
+<style>
+    .container {
+        padding-top: 1cm;
+    }
+</style>

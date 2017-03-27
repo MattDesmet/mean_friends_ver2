@@ -1,5 +1,5 @@
-
-<div class="container" ng-controller="userController">
+<!-- <link rel="stylesheet" type="text/css" href="static/styles.css"> -->
+<div class="jumbotron" ng-controller="userController">
   <h1>Add a Friend</h1>
   <form ng-submit = "add()">
 
@@ -7,7 +7,7 @@
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">First Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" ng-model ="newUser.first_name" placeholder="enter first name">
+        <input type="text" class="form-control input-lg" ng-model ="newUser.first_name" placeholder="enter first name">
       </div>
     </div>
 
@@ -15,7 +15,7 @@
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Last Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" ng-model = "newUser.last_name" placeholder="enter last name">
+        <input type="text" class="form-control input-lg" ng-model = "newUser.last_name" placeholder="enter last name">
       </div>
     </div>
 
@@ -23,7 +23,7 @@
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Birthday</label>
       <div class="col-sm-10">
-        <input type="date" class="form-control" ng-model="newUser.birthday" placeholder="enter birthday">
+        <input type="date" class="form-control input-lg" ng-model="newUser.birthday" placeholder="enter birthday">
       </div>
     </div>
 
@@ -31,7 +31,7 @@
     <!-- BUTTON -->
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Add Friend</button>
+        <button type="submit" class="btn btn-lg btn-warning">Add Friend</button>
       </div>
     </div>
   </form>

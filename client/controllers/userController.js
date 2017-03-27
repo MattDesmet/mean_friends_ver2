@@ -28,6 +28,7 @@ app.controller('userController', function($scope, userFactory, $routeParams){
           userFactory.update(id)
         }
         $scope.change = function(){
-          console.log($scope.cur_user)
+          console.log($scope.cur_user);
+          userFactory.change($scope.cur_user)// don't pass ID but the entire user object of info.
         }
     })

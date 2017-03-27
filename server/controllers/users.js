@@ -24,9 +24,10 @@ module.exports = (function(){
           })
       },
       change: function(request,response){
+        console.log('this is request body object', request.body);
         User.findOne({_id: request.body._id}, function(err,user){
           user.first_name = request.body.first_name
-            user.last = request.body.last_name
+          user.last_name = request.body.last_name
             user.birthday = request.body.birthday
             user.save(function(err,user){
               response.json(user)

@@ -7,6 +7,9 @@ $routeProvider
     // controller:
     // controllerAs:
   })
+  .when('/',{
+    templateUrl: 'partials/login.html'
+  })
   .when('/new',{
     templateUrl: 'partials/new.html'
   })
@@ -24,6 +27,9 @@ $routeProvider
   })
   .when('/new2',{
     templateUrl: 'partials/new2.html'
+  })
+  .when('/login_boot',{
+    templateUrl: 'partials/login_boot.html'
   })
   .otherwise({
     redirectTo: '/dashboard'
