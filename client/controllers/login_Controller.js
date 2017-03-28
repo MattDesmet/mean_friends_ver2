@@ -1,4 +1,4 @@
-app.controller('loginController', function($scope, loginFactory) {
+app.controller('login_Controller', function($scope, login_Factory) {
   $scope.errors = [];
   $scope.login = function(){
     $scope.errors = []
@@ -11,10 +11,23 @@ app.controller('loginController', function($scope, loginFactory) {
     if($scope.login_info.password.length < 1){
       $scope.errors.push("please enter a password")
     }else{
-      loginFactory.login($scope.login_info)
+      login_Factory.login($scope.login_info)
     }
   }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //   $scope.login = function(){
 //     console.log($scope.login_info);

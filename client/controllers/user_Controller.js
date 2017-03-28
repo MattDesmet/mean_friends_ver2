@@ -1,6 +1,6 @@
-app.controller('userController', function($scope, userFactory, $routeParams){
+app.controller('user_Controller', function($scope, user_Factory, $routeParams){
         if($routeParams.id){
-          userFactory.getAll(function(data){
+          user_Factory.getAll(function(data){
             $scope.users = data
             for(user in $scope.users){
               if($scope.users[user]['_id'] == $routeParams.id){
@@ -11,24 +11,24 @@ app.controller('userController', function($scope, userFactory, $routeParams){
           })
         }
         else{
-          userFactory.getAll(function(data){
+          user_Factory.getAll(function(data){
             $scope.users = data
             })
         }
         $scope.add = function(){
-          userFactory.add($scope.newUser)
+          user_Factory.add($scope.newUser)
         }
         $scope.delete = function(id){
-          userFactory.delete(id)
+          user_Factory.delete(id)
         }
         $scope.show = function(id){
-          userFactory.show(id)
+          user_Factory.show(id)
         }
         $scope.update = function(id){
-          userFactory.update(id)
+          user_Factory.update(id)
         }
         $scope.change = function(){
           console.log($scope.cur_user);
-          userFactory.change($scope.cur_user)// don't pass ID but the entire user object of info.
+          user_Factory.change($scope.cur_user)// don't pass ID but the entire user object of info.
         }
     })

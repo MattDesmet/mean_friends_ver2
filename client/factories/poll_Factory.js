@@ -1,4 +1,4 @@
-app.factory('userFactory', function($http, $location, $route){
+app.factory('poll_Factory',function($http, $location){
   var factory = {}
     factory.getAll = function(callback){
       $http.get('/users/getall').then(function(output){

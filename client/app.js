@@ -31,7 +31,13 @@ $routeProvider
   .when('/login_boot',{
     templateUrl: 'partials/login_boot.html'
   })
+  .when('/new_poll',{
+    templateUrl: 'partials/new_poll.html'
+  })
+  .when('/polls_dashboard',{
+    templateUrl: 'partials/polls_dashboard.html'
+  })
   .otherwise({
-    redirectTo: '/dashboard'
+    redirectTo: '/'
   });
 });
