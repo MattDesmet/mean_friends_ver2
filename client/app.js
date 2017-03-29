@@ -16,6 +16,9 @@ $routeProvider
   .when('/show/:id',{
     templateUrl: 'partials/show.html'
     })
+  // .when('/show',{
+  //   templateUrl: 'partials/show.html'
+  //   })
   .when('/update/:id',{
     templateUrl: 'partials/update.html'
     })

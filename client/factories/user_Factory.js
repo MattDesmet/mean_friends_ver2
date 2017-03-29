@@ -5,8 +5,9 @@ app.factory('user_Factory', function($http, $location, $route){
         callback(output.data)
         })
     }
-    factory.add = function(user){
-      $http.post('/users/add',user).then(function(output){
+    factory.add = function(user){ //user that is passed is $scope.newUser object data
+      console.log(user);
+      $http.post('/users/add',user).then(function(output){ // post route reaches route.js /users/add and passes the user var which is the scope object.
         $location.url('/dashboard')
         })
     }
@@ -24,7 +25,7 @@ app.factory('user_Factory', function($http, $location, $route){
     factory.change = function(user){
       console.log('this is the USER data in USER factory', user);
       $http.post('/users/change',user).then(function(){
-        $location.url('/show')
+        $location.url('/dashboard')
       })
     }
     return factory;

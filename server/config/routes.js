@@ -1,7 +1,7 @@
 var user = require('./../controllers/users.js')
-    console.log(user)
+    console.log('This is the user object from routes.js file',user)
 module.exports = function(app){
-  app.post('/users/add',function(request,response){
+  app.post('/users/add',function(request,response){// hitting the users.js controller .add method
     user.add(request,response)
     })
   app.get('/users/getall', function(request,response){
@@ -16,4 +16,4 @@ module.exports = function(app){
     })
 }
 
-console.log('routes.js is working');
+console.log('3. routes.js is working');

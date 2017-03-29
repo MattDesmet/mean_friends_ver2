@@ -1,35 +1,40 @@
 app.controller('poll_Controller', function($scope, poll_Factory, $routeParams) {
-  if($routeParams.id){
-    userFactory.getAll(function(data){
-      $scope.users = data
-      for(user in $scope.users){
-        if($scope.users[user]['_id'] == $routeParams.id){
-          $scope.cur_user = $scope.users[user]
-          console.log($scope.cur_user)
-        }
-      }
-    })
-  }
-  else{
-    userFactory.getAll(function(data){
-      $scope.users = data
-      })
-  }
+  // if($routeParams.id){
+  //   poll_Factory.getAll(function(data){
+  //     $scope.users = data
+  //     for(user in $scope.users){
+  //       if($scope.users[user]['_id'] == $routeParams.id){
+  //         $scope.cur_user = $scope.users[user]
+  //         console.log($scope.cur_user)
+  //       }
+  //     }
+  //   })
+  // }
+  // else{
+  //   poll_Factory.getAll(function(data){
+  //     $scope.users = data
+  //     })
+  // }
+  $scope.newUser = {name: 'NewUsers_Name',
+                    id:1}
+  $scope.cur_user = {name: 'CurUsers_Name',
+                    id:2}
+
   $scope.add = function(){
-    userFactory.add($scope.newUser)
+    poll_Factory.add($scope.newUser)
   }
   $scope.delete = function(id){
-    userFactory.delete(id)
+    poll_Factory.delete(id)
   }
   $scope.show = function(id){
-    userFactory.show(id)
+    poll_Factory.show(id)
   }
   $scope.update = function(id){
-    userFactory.update(id)
+    poll_Factory.update(id)
   }
   $scope.change = function(){
     console.log($scope.cur_user);
-    userFactory.change($scope.cur_user)// don't pass ID but the entire user object of info.
+    poll_Factory.change($scope.cur_user)// don't pass ID but the entire user object of info.
   }
 })
 

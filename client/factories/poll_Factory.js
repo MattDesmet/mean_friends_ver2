@@ -1,7 +1,7 @@
 app.factory('poll_Factory',function($http, $location){
   var factory = {}
     factory.getAll = function(callback){
-      $http.get('/users/getall').then(function(output){
+      $http.get('/users/getall').then(function(output){ // sends info to server controller users.js & hits the getall function.
         callback(output.data)
         })
     }
